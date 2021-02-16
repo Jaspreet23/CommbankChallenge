@@ -17,7 +17,7 @@ public class TravelMoneySteps extends base {
 	public static String client_Name;
 	public ExtentReports report;
 	public ExtentTest logger;
-	TravelMoney travelMoney  = new TravelMoney(driver);
+
 	@Before
 	public void createReport() {
 		AUTO_ENV = System.getProperty("AUTO_ENV");
@@ -67,6 +67,7 @@ public class TravelMoneySteps extends base {
 
 	@Then("^I verify UI for the travel page$")
 	public void i_verify_ui_ofTravelPage(){
+		TravelMoney travelMoney  = new TravelMoney(driver);
 		travelMoney.validateTravelPageHasLoaded();
 	}
 

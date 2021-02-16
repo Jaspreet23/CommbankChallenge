@@ -1,2 +1,4 @@
 
-bin/src/main/java/API/API_Tasks$Role.class
+bin/*
+.idea/*
+.idea/(libraries/Maven__cglib_cglib_nodep_2_2.xml)

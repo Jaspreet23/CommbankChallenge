@@ -12,7 +12,7 @@ public class HomePageSteps extends base {
     public static String urlAUTO_ENV;
     public ExtentReports report;
     public ExtentTest logger;
-    HomePage homePage = new HomePage(driver);
+
 
     @Given("^I launch the homepage$")
     public void login_to_portal_as_something_user() throws Throwable {
@@ -31,15 +31,18 @@ public class HomePageSteps extends base {
     }
     @And("^I validate homepage has loaded$")
     public void  i_validateUIForHomePage(){
+        HomePage homePage = new HomePage(driver);
         homePage.validateUIForHomePage();
     }
     @When("^I click on Tell me more section$")
     public void i_clickOnSection(){
+        HomePage homePage = new HomePage(driver);
         homePage.clickOnTransferMoney();
     }
     @Then("^I click on Netbank login$")
     public void i_click_on_netbank() {
-       homePage.clickOnNetBank();
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnNetBank();
     }
 
 }

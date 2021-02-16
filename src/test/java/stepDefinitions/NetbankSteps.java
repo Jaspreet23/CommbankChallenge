@@ -12,10 +12,11 @@ public class NetbankSteps extends base {
 
     public ExtentReports report;
     public ExtentTest logger;
-    NetbankPage netbankPage = new NetbankPage(driver);
+
 
     @Then("^I validate netbank login page has loaded$")
     public void i_verify_ui_ofTravelPage(){
+        NetbankPage netbankPage = new NetbankPage(driver);
         netbankPage.validateLogon();
     }
 
